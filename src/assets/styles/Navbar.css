@@ -11,12 +11,27 @@
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  background: var(--primary-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   cursor: pointer;
+  user-select: none;
+}
+
+.logo-img {
+  height: 50px; /* Adjust the size of the image */
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: invert(1);
+}
+
+.logo-text {
+  margin-left: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-links {
@@ -99,19 +114,33 @@
   margin: 0.5rem 0;
 }
 
+@media (max-width: 1115px) {
+  .nav-container {
+    .buttons {
+      .btn-primary {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 987px) {
+  .nav-container {
+    .nav-links {
+      column-gap: 1rem;
+    }
+  }
+}
+
 /* Responsive Design */
-@media (max-width: 768px) {
-  .logo {
+@media (max-width: 962px) {
+  .logo h3 {
     font-size: 1.2rem;
   }
   .nav-links {
     display: none;
     flex-direction: column;
     height: 100vh;
-
-    a{
-      
-    }
   }
 
   .hamburger {
@@ -126,5 +155,14 @@
     background: var(--primary-gradient);
     color: var(--text-color);
     border: none;
+  }
+}
+
+@media (max-width:550px) {
+  .nav-container{
+
+    .logo-text{
+      display: none;
+    }
   }
 }

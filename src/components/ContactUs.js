@@ -27,7 +27,7 @@ const ContactUs = () => {
   }
 
   return (
-    <motion.div
+    <motion.div id='contact'
       className='contact-container'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

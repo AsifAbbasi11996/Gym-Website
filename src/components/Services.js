@@ -40,7 +40,7 @@ const services = [
     image: dietPlan
   },
   {
-    title: 'Progress Tracking with Visual Analytics',
+    title: 'Progress Tracking',
     description:
       'Monitor your growth with interactive charts and visual analytics for a futuristic experience.',
     image: tracking
@@ -75,7 +75,7 @@ const Services = () => {
             <img
               src={service.image}
               alt={service.title}
-              className='service-image'
+              className='service-image' loading='lazy'
             />
             <h2>{service.title}</h2>
             <p>{service.description}</p>

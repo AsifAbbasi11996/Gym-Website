@@ -3,14 +3,17 @@ import { Link } from 'react-router-dom'
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 import '../assets/styles/Footer.css'
+import logo from '../assets/images/gymlogo.png'
 
 const Footer = () => {
   return (
     <footer className='footer-container'>
       <div className='footer-content'>
-        {/* Logo */}
         <div className='footer-logo'>
-          <h3>GymInfluencer</h3>
+          <div className='logo'>
+            <img src={logo} />
+            <h3>GymInfluencer</h3>
+          </div>
           <p>
             Empower your fitness journey with personalized workout plans, expert
             guidance, and a supportive community designed to help you achieve

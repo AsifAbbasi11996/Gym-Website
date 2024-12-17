@@ -7,18 +7,39 @@
   overflow: hidden;
   background: var(--background-dark);
 
-  .images {
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/background.jpg') no-repeat center center/cover;
+    opacity: 0.2; /* Adjust opacity for a dim background */
+    z-index: -1;
+  }
+
+  /* Scrolling Images */
+  .scrolling-images {
+    margin-top: 5rem;
+    height: 400px; /* Adjust height */
+    width: 300px; /* Adjust width */
+    overflow: hidden;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  .scroll-wrapper {
     display: flex;
     flex-direction: column;
-    row-gap: 3rem;
-    margin-top: 5rem;
+  }
 
-    img {
-      width: 300px;
-      height: 200px;
-      border-radius: 10px;
-      object-fit: cover;
-    }
+  .scroll-wrapper img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* Spacing between images */
+    border-radius: 10px;
+    object-fit: cover;
   }
 }
 
@@ -86,41 +107,6 @@
   animation: pulse 3s infinite;
 }
 
-/* Animated Shapes */
-.animated-shape {
-  position: absolute;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.shape-one {
-  width: 200px;
-  height: 200px;
-  top: 10%;
-  left: 10%;
-  background: var(--neon-blue);
-  filter: blur(50px);
-}
-
-.shape-two {
-  width: 250px;
-  height: 250px;
-  bottom: 10%;
-  right: 10%;
-  background: var(--neon-pink);
-  filter: blur(70px);
-}
-
-.shape-three {
-  width: 150px;
-  height: 150px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: var(--primary-gradient);
-  filter: blur(30px);
-}
-
 /* Animations */
 @keyframes glowing-text {
   0%,
@@ -144,7 +130,7 @@
 
 @media (max-width: 1300px) {
   .home-container {
-    .images {
+    .scrolling-images {
       display: none;
     }
   }
@@ -157,7 +143,7 @@
   .hero-text h1 {
     font-size: 1rem;
 
-    span{
+    span {
       font-size: 2rem;
     }
   }

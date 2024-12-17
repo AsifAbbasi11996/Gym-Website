@@ -10,10 +10,27 @@ import img4 from '../assets/images/img4.jpg'
 const Home = () => {
   return (
     <div className='home-container'>
-      <div className='images'>
-        <img src={img1} />
-        <img src={img2} />
+      {/* Animated Background */}
+      <div className='background-overlay' />
+
+      {/* Animated Images Div */}
+      <div className='scrolling-images'>
+        <motion.div
+          className='scroll-wrapper'
+          animate={{ y: ['0%', '-100%'] }}
+          transition={{
+            duration: 10, // Adjust this for speed
+            ease: 'linear',
+            repeat: Infinity
+          }}
+        >
+          <img src={img1} alt='Image 1' loading='lazy' />
+          <img src={img3} alt='Image 3' loading='lazy' />
+          <img src={img2} alt='Image 2' loading='lazy' />
+        </motion.div>
       </div>
+
+      {/* Hero Section */}
       <div className='hero'>
         <motion.div
           className='hero-text'
@@ -41,40 +58,32 @@ const Home = () => {
           </motion.a>
         </motion.div>
 
-        {/* Animated Shapes */}
-        {/* <motion.div
-        className="animated-shape shape-one"
-        initial={{ scale: 0 }}
-        animate={{ scale: [0.8, 1.2, 1] }}
-        transition={{ duration: 2, repeat: Infinity, repeatType: 'reverse' }}
-        ></motion.div>
-        <motion.div
-        className="animated-shape shape-two"
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: [100, 0, 50] }}
-        transition={{ duration: 3, repeat: Infinity, repeatType: 'reverse' }}
-        ></motion.div> */}
-        {/* <motion.div
-        className="animated-shape shape-three"
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: [-100, 50, 0] }}
-        transition={{ duration: 2, repeat: Infinity, repeatType: 'reverse' }}
-        ></motion.div> */}
-
-        {/* Image Section */}
+        {/* Hero Image */}
         <motion.div
           className='hero-image'
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5 }}
         >
-          <img src={homeImg} alt='Gym Influencer' />
+          <img src={homeImg} alt='Gym Influencer' loading='lazy' />
         </motion.div>
       </div>
 
-      <div className='images'>
-        <img src={img3} />
-        <img src={img4} />
+      {/* More Animated Images */}
+      <div className='scrolling-images'>
+        <motion.div
+          className='scroll-wrapper'
+          animate={{ y: ['-100%', '0%'] }}
+          transition={{
+            duration: 10, // Adjust this for speed
+            ease: 'linear',
+            repeat: Infinity
+          }}
+        >
+          <img src={img3} alt='Image 3' loading='lazy' />
+          <img src={img4} alt='Image 4' loading='lazy' />
+          <img src={img1} alt='Image 1' loading='lazy' />
+        </motion.div>
       </div>
     </div>
   )

@@ -38,7 +38,7 @@ const FAQs = () => {
   }
 
   return (
-    <div className='faqs-container'>
+    <div id='faqs' className='faqs-container'>
       <h2>Frequently Asked Questions</h2>
       {faqs.map((faq, index) => (
         <div key={index} className='faq-item'>
