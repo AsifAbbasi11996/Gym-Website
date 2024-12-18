@@ -98,8 +98,8 @@
 
 @media (max-width: 768px) {
   .contact-container {
-    padding: 1rem 3rem;
-    
+    padding: 1rem 2rem;
+
     .contact-title {
       font-size: 1.5rem;
     }

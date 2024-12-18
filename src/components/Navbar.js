@@ -11,11 +11,13 @@ const Navbar = () => {
     setIsOpen(!isOpen)
   }
 
-  const scrollToTop = () => {
+  const scrollToTopAndResetURL = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth' // For smooth scrolling
+      behavior: 'smooth'
     })
+    // Update the browser URL to "/"
+    window.history.pushState(null, '', '/')
   }
 
   const handleScroll = id => {
@@ -63,7 +65,7 @@ const Navbar = () => {
       <div className='hamburger' onClick={toggleMenu}>
         {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
       </div>
-      <div className='logo' onClick={scrollToTop}>
+      <div className='logo' onClick={scrollToTopAndResetURL}>
         <motion.img
           src={logo}
           alt='GymInfluencer Logo'
@@ -81,6 +83,7 @@ const Navbar = () => {
           GymInfluencer
         </motion.span>
       </div>
+
       <div className={`nav-links ${isOpen ? 'open' : ''}`}>
         <a
           href='#features'

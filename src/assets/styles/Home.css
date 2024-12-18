@@ -1,19 +1,19 @@
 .home-container {
   display: flex;
-  justify-content: center;
+  align-items: center;
   column-gap: 2rem;
   min-height: 90vh;
   position: relative;
   overflow: hidden;
-  background: var(--bg-dark-opacity);
+  background: var(--background-black);
 
   .background-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images/background.jpg') no-repeat center center/cover;
+    background: url('../images/homebg.jpg') no-repeat top center/cover;
     z-index: -1;
   }
 
@@ -44,10 +44,7 @@
 }
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 2rem;
 }
 
 .hero-text {
@@ -154,5 +151,14 @@
 
   .hero-image img {
     max-width: 300px;
+  }
+}
+
+@media (max-width: 475px) {
+  .home-container {
+    .background-overlay {
+      position: fixed;
+      background: url('../images/homebg.jpg') no-repeat top left calc(100% + 150px) / cover;
+    }
   }
 }

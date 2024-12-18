@@ -13,10 +13,10 @@ const Homepage = () => {
     <>
       <Home />
       <Services />
-      <DietPlans />
-      <Testimonials />
       <WorkoutPlans />
       <Stats />
+      <DietPlans />
+      <Testimonials />
       <FAQs />
       <ContactUs />
     </>

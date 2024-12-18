@@ -4,8 +4,8 @@ import '../assets/styles/Services.css'
 
 // Images
 import effortlessLogging from '../assets/images/effortless.jpg'
-import repCounting from '../assets/images/repcounting.jpg'
-import calorieCalculation from '../assets/images/calorie.jpg'
+import repCounting from '../assets/images/repcounting.webp'
+import calorieCalculation from '../assets/images/calorie.jpeg'
 import workoutPlan from '../assets/images/workoutplan.jpg'
 import dietPlan from '../assets/images/dietplan.jpg'
 import tracking from '../assets/images/tracking.jpg'

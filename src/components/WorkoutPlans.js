@@ -3,12 +3,12 @@ import { motion } from 'framer-motion'
 import '../assets/styles/WorkoutPlans.css'
 
 // Images
-import strengthTraining from '../assets/images/workoutplan.jpg'
+import strengthTraining from '../assets/images/strength.jpg'
 import cardio from '../assets/images/cardio.jpg'
-import yoga from '../assets/images/yoga.jpg'
+import yoga from '../assets/images/yoga.avif'
 import pilates from '../assets/images/pilates.jpg'
 import HIIT from '../assets/images/hiit.jpg'
-import stretching from '../assets/images/stretching.webp'
+import stretching from '../assets/images/stretching.jpg'
 
 const workoutPlans = [
   {

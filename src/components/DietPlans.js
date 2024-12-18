@@ -4,10 +4,10 @@ import '../assets/styles/DietPlans.css';
 
 // Images
 import veganDiet from '../assets/images/vegandiet.jpg'
-import ketoDiet from '../assets/images/ketodiet.jpg'
+import ketoDiet from '../assets/images/ketodiet.jpeg'
 import balancedDiet from '../assets/images/balanceddiet.jpg'
-import lowCarbDiet from '../assets/images/lowcarbdiet.jpg'
-import paleoDiet from '../assets/images/paleodiet.jpg'
+import lowCarbDiet from '../assets/images/lowcarbdiet.webp'
+import paleoDiet from '../assets/images/paleodiet.jpeg'
 import mediterraneanDiet from '../assets/images/mediterraneandiet.jpg'
 
 const dietPlans = [

@@ -1,17 +1,21 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-  --primary-gradient: linear-gradient(90deg, #ff416c, #ff4b2b); /* Vibrant pink-red gradient */
+  --primary-gradient: linear-gradient(90deg, #ff416c, #ff4b2b);
   --primary-color: #ff4b2b;
   --hover-primary-color: rgba(255, 75, 75, 0.8);
   --text-color: #ffffff;
   --background-dark: #0d0d0d;
   --background-light: #1a1a1a;
-  --bg-light-opacity: rgba(0, 0, 0, 0.6);
+  --bg-light-opacity: rgba(0, 0, 0, 0.4);
   --bg-dark-opacity: rgba(0, 0, 0, 0.8);
-  --neon-blue: #00e6ff;
-  --neon-pink: #ff00e6;
+  --background-black: linear-gradient(
+    to right,
+    rgb(0, 0, 0),
+    rgba(0, 0, 0, 0)
+  );
 }
