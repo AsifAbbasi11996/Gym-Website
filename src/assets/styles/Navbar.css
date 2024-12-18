@@ -3,11 +3,18 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background: var(--background-dark);
-  color: var(--text-color);
-  position: sticky;
+  background: var(--background-dark); /* Dark background from CSS variables */
+  color: var(--text-color); /* Text color from CSS variables */
+  position: sticky; /* Sticks to the top of the viewport */
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+  transition: background-color 0.3s ease-in-out; /* Smooth background transition */
+}
+
+.nav-container.scrolled {
+  background: var(--bg-light-opacity); /* Slightly transparent background after scrolling */
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow effect */
 }
 
 .logo {

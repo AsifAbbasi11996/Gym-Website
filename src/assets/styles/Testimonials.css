@@ -1,8 +1,20 @@
 .testimonials-container {
   padding: 4rem 2rem;
   text-align: center;
-  background: var(--background-dark);
+  background: var(--bg-dark-opacity);
   color: var(--text-color);
+  position: relative;
+
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/testimonialsbg.jpg') no-repeat center
+      center/cover;
+    z-index: -1;
+  }
 }
 
 .testimonials-container h2 {
@@ -52,9 +64,8 @@
 }
 
 @media (max-width: 768px) {
-  .testimonials-container{
-
-    h2{
+  .testimonials-container {
+    h2 {
       font-size: 1.5rem;
     }
   }

@@ -4,9 +4,20 @@
 
 .diet-plans-container {
   padding: 3rem 1rem;
-  background: var(--background-dark);
+  background: var(--bg-dark-opacity);
   color: var(--text-color);
   text-align: center;
+  position: relative;
+
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/dietplanbg.jpg') no-repeat center center/cover;
+    z-index: -1;
+  }
 }
 
 .diet-plans-header h1 {

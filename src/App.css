@@ -10,6 +10,8 @@
   --text-color: #ffffff;
   --background-dark: #0d0d0d;
   --background-light: #1a1a1a;
+  --bg-light-opacity: rgba(0, 0, 0, 0.6);
+  --bg-dark-opacity: rgba(0, 0, 0, 0.8);
   --neon-blue: #00e6ff;
   --neon-pink: #ff00e6;
 }

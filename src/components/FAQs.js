@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 import { Collapse } from 'react-collapse'
 import '../assets/styles/FAQs.css'
 
@@ -39,12 +40,26 @@ const FAQs = () => {
 
   return (
     <div id='faqs' className='faqs-container'>
-      <h2>Frequently Asked Questions</h2>
+       <div className='background-overlay' />
+       
+      <motion.h2
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        Frequently Asked Questions
+      </motion.h2>
       {faqs.map((faq, index) => (
         <div key={index} className='faq-item'>
-          <div className='faq-question' onClick={() => toggle(index)}>
+          <motion.div
+            className='faq-question'
+            onClick={() => toggle(index)}
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             <h3>{faq.question}</h3>
-          </div>
+          </motion.div>
           <Collapse isOpened={openedIndex === index}>
             <div className='faq-answer'>
               <p>{faq.answer}</p>

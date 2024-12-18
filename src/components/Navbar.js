@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi'
 import { motion } from 'framer-motion'
 import '../assets/styles/Navbar.css'
@@ -11,7 +11,6 @@ const Navbar = () => {
     setIsOpen(!isOpen)
   }
 
-  // Scroll to the top function
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -19,18 +18,40 @@ const Navbar = () => {
     })
   }
 
-  const handleScroll = (id) => {
-    const element = document.getElementById(id);
-    const navbarHeight = document.querySelector('.nav-container').offsetHeight; // Get navbar height
+  const handleScroll = id => {
+    const element = document.getElementById(id)
+    const navbarHeight = document.querySelector('.nav-container').offsetHeight // Get navbar height
+    const additionalPadding = 60 // Add top padding of 60px
+
     if (element) {
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset
       window.scrollTo({
-        top: elementPosition - navbarHeight, // Use navbar height as offset
-        behavior: 'smooth',
-      });
+        top: elementPosition - navbarHeight - additionalPadding, // Subtract navbar height and additional padding
+        behavior: 'smooth'
+      })
     }
-  };
-  
+  }
+
+  const closeMenu = () => {
+    setIsOpen(false)
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const nav = document.querySelector('.nav-container')
+      if (window.scrollY > 100) {
+        nav.classList.add('scrolled')
+      } else {
+        nav.classList.remove('scrolled')
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   return (
     <motion.nav
@@ -61,12 +82,51 @@ const Navbar = () => {
         </motion.span>
       </div>
       <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <a href='#features' onClick={() => handleScroll('features')}>Features</a>
-        <a href='#diet-plans'>Diet Plans</a>
-        <a href='#workout-plans'>Workout Plans</a>
-        <a href='#blog'>Blog</a>
-        <a href='#faqs' onClick={() => handleScroll('faqs')}>FAQs</a>
-        <a href='#contact' onClick={() => handleScroll('contact')}>Contact Us</a>
+        <a
+          href='#features'
+          onClick={() => {
+            handleScroll('features')
+            closeMenu()
+          }}
+        >
+          Features
+        </a>
+        <a
+          href='#diet-plans'
+          onClick={() => {
+            handleScroll('diet-plans')
+            closeMenu()
+          }}
+        >
+          Diet Plans
+        </a>
+        <a
+          href='#workout-plans'
+          onClick={() => {
+            handleScroll('workout-plans')
+            closeMenu()
+          }}
+        >
+          Workout Plans
+        </a>
+        <a
+          href='#faqs'
+          onClick={() => {
+            handleScroll('faqs')
+            closeMenu()
+          }}
+        >
+          FAQs
+        </a>
+        <a
+          href='#contact'
+          onClick={() => {
+            handleScroll('contact')
+            closeMenu()
+          }}
+        >
+          Contact Us
+        </a>
       </div>
       <div className='buttons'>
         <a href='#get-started' className='btn btn-primary'>

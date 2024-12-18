@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 import '../assets/styles/Footer.css'
@@ -26,22 +25,19 @@ const Footer = () => {
           <h3>Quick Links</h3>
           <ul>
             <li>
-              <Link href='/features'>Features</Link>
+              <a href='#features'>Features</a>
             </li>
             <li>
-              <Link href='/workout-plans'>Workout Plans</Link>
+              <a href='#workout-plans'>Workout Plans</a>
             </li>
             <li>
-              <Link href='/diet-plans'>Diet Plans</Link>
+              <a href='#diet-plans'>Diet Plans</a>
             </li>
             <li>
-              <Link href='/blog'>Blog</Link>
+              <a href='#faqs'>FAQs</a>
             </li>
             <li>
-              <Link href='/faqs'>FAQs</Link>
-            </li>
-            <li>
-              <Link href='/contact-us'>Contact Us</Link>
+              <a href='#contact'>Contact Us</a>
             </li>
           </ul>
         </div>
@@ -50,34 +46,34 @@ const Footer = () => {
         <div className='footer-social'>
           <h3>Follow Us</h3>
           <div className='social-links'>
-            <Link
+            <a
               href='https://facebook.com'
               target='_blank'
               rel='noopener noreferrer'
             >
               <FaFacebook />
-            </Link>
-            <Link
+            </a>
+            <a
               href='https://twitter.com'
               target='_blank'
               rel='noopener noreferrer'
             >
               <FaXTwitter />
-            </Link>
-            <Link
+            </a>
+            <a
               href='https://instagram.com'
               target='_blank'
               rel='noopener noreferrer'
             >
               <FaInstagram />
-            </Link>
-            <Link
+            </a>
+            <a
               href='https://linkedin.com'
               target='_blank'
               rel='noopener noreferrer'
             >
               <FaLinkedin />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

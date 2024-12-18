@@ -22,6 +22,7 @@ const testimonials = [
 
 const Testimonials = () => (
   <div className="testimonials-container">
+    <div className='background-overlay' />
     <h2>What Our Users Say</h2>
     <div className="testimonials-grid">
       {testimonials.map((testimonial, index) => (

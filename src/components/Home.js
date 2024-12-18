@@ -34,9 +34,9 @@ const Home = () => {
       <div className='hero'>
         <motion.div
           className='hero-text'
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
         >
           <h1>
             Welcome to <span>GymInfluencer</span>

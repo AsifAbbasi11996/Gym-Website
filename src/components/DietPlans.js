@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import '../assets/styles/DietPlans.css';
 
 // Images
-import veganDiet from '../assets/images/calorie.jpg'
-import ketoDiet from '../assets/images/dietplan.jpg'
-import balancedDiet from '../assets/images/effortless.jpg'
-import lowCarbDiet from '../assets/images/img1.jpg'
-import paleoDiet from '../assets/images/repcounting.jpg'
-import mediterraneanDiet from '../assets/images/workoutplan.jpg'
+import veganDiet from '../assets/images/vegandiet.jpg'
+import ketoDiet from '../assets/images/ketodiet.jpg'
+import balancedDiet from '../assets/images/balanceddiet.jpg'
+import lowCarbDiet from '../assets/images/lowcarbdiet.jpg'
+import paleoDiet from '../assets/images/paleodiet.jpg'
+import mediterraneanDiet from '../assets/images/mediterraneandiet.jpg'
 
 const dietPlans = [
   {
@@ -52,6 +52,7 @@ const dietPlans = [
 const DietPlans = () => {
   return (
     <div id="diet-plans" className="diet-plans-container">
+      <div className='background-overlay' />
       <motion.div
         className="diet-plans-header"
         initial={{ opacity: 0, y: -50 }}
@@ -66,7 +67,7 @@ const DietPlans = () => {
           <motion.div
             className="diet-plan-card"
             key={index}
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 10, delay: index * 0.2 }}

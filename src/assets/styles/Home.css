@@ -5,7 +5,7 @@
   min-height: 90vh;
   position: relative;
   overflow: hidden;
-  background: var(--background-dark);
+  background: var(--bg-dark-opacity);
 
   .background-overlay {
     position: absolute;
@@ -14,7 +14,6 @@
     width: 100%;
     height: 100%;
     background: url('../images/background.jpg') no-repeat center center/cover;
-    opacity: 0.2; /* Adjust opacity for a dim background */
     z-index: -1;
   }
 
@@ -40,6 +39,7 @@
     margin-bottom: 10px; /* Spacing between images */
     border-radius: 10px;
     object-fit: cover;
+    /* opacity: 0.; */
   }
 }
 

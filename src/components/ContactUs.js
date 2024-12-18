@@ -33,6 +33,8 @@ const ContactUs = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
+      <div className='background-overlay' />
+      
       <motion.h1
         className='contact-title'
         initial={{ y: -50, opacity: 0 }}
