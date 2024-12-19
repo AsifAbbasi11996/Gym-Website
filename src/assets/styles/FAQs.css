@@ -1,5 +1,5 @@
 .faqs-container {
-  padding: 4rem 15rem;
+  padding: 6rem 15rem;
   color: var(--text-color);
   position: relative;
   background: var(--bg-dark-opacity);
@@ -70,8 +70,8 @@
 
 @media (max-width: 768px) {
   .faqs-container {
-    padding: 2rem 1rem;
-    height: 80vh;
+    padding: 6rem 1rem;
+    height: 130vh;
 
     h2 {
       font-size: 1.5rem;
