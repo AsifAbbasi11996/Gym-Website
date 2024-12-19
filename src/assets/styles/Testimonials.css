@@ -24,7 +24,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 2rem;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .testimonials-grid {
@@ -55,6 +55,7 @@
 .testimonial-card p {
   font-size: 1rem;
   margin-bottom: 1rem;
+  letter-spacing: 1.5px;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -62,6 +63,7 @@
   font-size: 1.1rem;
   font-weight: bold;
   color: var(--text-color);
+  letter-spacing: 1px;
 }
 
 @media (max-width: 768px) {

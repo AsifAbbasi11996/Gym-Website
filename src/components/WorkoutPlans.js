@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { gsap } from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 import '../assets/styles/WorkoutPlans.css'
 
 // Images
@@ -49,12 +51,33 @@ const workoutPlans = [
 ]
 
 const WorkoutPlans = () => {
+  useEffect(() => {
+    // Initialize GSAP and ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger)
+
+    // GSAP Animation for the carousel with infinite loop
+    const carousel = document.querySelector('.workout-plans-carousel')
+    gsap.to(carousel, {
+      x: '-200%',
+      duration: 20,
+      repeat: -1, // Infinite loop
+      ease: 'linear', // Smooth scrolling effect
+      scrollTrigger: {
+        trigger: '.workout-plans-carousel',
+        start: 'top top',
+        end: '+=500%', // Trigger when the carousel has scrolled fully out of view
+        scrub: 1, // Smooth scroll animation
+        markers: false
+      }
+    })
+  }, [])
+
   return (
     <div id='workout-plans' className='workout-plans-container'>
       <div className='background-overlay' />
       <motion.div
         className='workout-plans-header'
-        initial={{ opacity: 0, y: -50 }}
+        initial={{ y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
@@ -68,7 +91,7 @@ const WorkoutPlans = () => {
           <motion.div
             className='workout-plan-card'
             key={index}
-            initial={{ x: -50 }}
+            initial={{ opacity: 1, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.2 }}

@@ -29,12 +29,14 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0.5rem;
+  letter-spacing: 2px;
 }
 
 .workout-plans-header p {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 2rem;
+  letter-spacing: 1px;
 }
 
 .workout-plans-carousel {
@@ -44,6 +46,7 @@
   padding: 1rem;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* For better touch scrolling on mobile devices */
 }
 
 .workout-plan-card {
@@ -107,18 +110,24 @@
   background: var(--primary-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
 }
 
 .workout-plan-content p {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 962px) {
+  .workout-plans-container {
+    height: auto;
+  }
 }
 
 @media (max-width: 768px) {
   .workout-plans-container {
-    height: 80vh;
-    
     .workout-plans-header h1 {
       font-size: 1.5rem;
     }

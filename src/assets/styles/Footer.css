@@ -21,6 +21,7 @@
 .footer-content h3 {
   color: var(--primary-color);
   margin-bottom: 1rem;
+  letter-spacing: 2px;
 }
 
 .footer-logo {
@@ -48,6 +49,7 @@
 
 .footer-logo p {
   max-width: 400px;
+  letter-spacing: 1.5px;
 }
 
 .footer-links ul {
@@ -63,6 +65,7 @@
   color: var(--text-color);
   text-decoration: none;
   transition: color 0.3s ease;
+  letter-spacing: 1.5px;
 }
 
 .footer-links ul li a:hover {
