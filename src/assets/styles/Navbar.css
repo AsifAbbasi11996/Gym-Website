@@ -13,8 +13,11 @@
 }
 
 .nav-container.scrolled {
-  background: var(--bg-light-opacity); /* Slightly transparent background after scrolling */
-  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow effect */
+  backdrop-filter: blur(10px);
+  background: var(
+    --bg-light-opacity
+  ); /*Slightly transparent background after scrolling*/
+  /* box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3); Stronger shadow effect */
 }
 
 .logo {
@@ -144,7 +147,6 @@
 
 /* Responsive Design */
 @media (max-width: 962px) {
-
   .nav-container {
     background: var(--bg-light-opacity);
   }
@@ -174,10 +176,9 @@
   }
 }
 
-@media (max-width:550px) {
-  .nav-container{
-
-    .logo-text{
+@media (max-width: 550px) {
+  .nav-container {
+    .logo-text {
       display: none;
     }
   }

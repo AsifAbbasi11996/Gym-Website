@@ -71,7 +71,6 @@
   box-shadow: 0px 6px 20px var(--hover-primary-color);
 }
 
-
 /* Animations */
 @keyframes glowing-text {
   0%,
@@ -94,9 +93,6 @@
 }
 
 @media (max-width: 768px) {
-  .hero-text {
-    padding: 0 1rem;
-  }
   .hero-text h1 {
     font-size: 1rem;
 
@@ -117,7 +113,26 @@
 @media (max-width: 475px) {
   .home-container {
     .background-overlay {
-      background: url('../images/homebg.jpg') no-repeat top left calc(100% + 150px) / cover;
+      height: 100vh;
+      background: url('../images/homebg.jpg') no-repeat top left
+        calc(100% + 150px) / cover;
+    }
+  }
+}
+
+@media (max-width: 395px) {
+  .home-container {
+    .hero {
+      padding: 1rem;
+      .hero-text {
+        span {
+          font-size: 1.4rem;
+        }
+
+        p {
+          font-size: 0.8rem;
+        }
+      }
     }
   }
 }
