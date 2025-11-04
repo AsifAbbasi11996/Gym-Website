@@ -24,7 +24,7 @@ const Home = () => {
             and personalized diet plans.
           </p>
           <motion.a
-            href='#get-started'
+            href='#contact'
             className='btn btn-primary'
             whileHover={{
               scale: 1.1,

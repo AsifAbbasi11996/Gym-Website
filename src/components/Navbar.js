@@ -135,20 +135,12 @@ const Navbar = () => {
       </motion.div>
       <div className="buttons">
         <motion.a
-          href="#get-started"
+          href="#contact"
           className="btn btn-primary"
           whileHover={{ scale: 1.1 }}
           transition={{ type: 'spring', stiffness: 300 }}
         >
           Get Started
-        </motion.a>
-        <motion.a
-          href="#login"
-          className="btn btn-secondary"
-          whileHover={{ scale: 1.1 }}
-          transition={{ type: 'spring', stiffness: 300 }}
-        >
-          Login
         </motion.a>
       </div>
     </motion.nav>
